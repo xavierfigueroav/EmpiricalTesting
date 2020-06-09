@@ -9,9 +9,14 @@ import java.util.Scanner;
 public class Triangle {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int a, b, c;
-		boolean c1, c2, c3, isTriangle;
+        
+        System.out.println("Test 1: "+ "Equilateral".equals(triangleType(3,3,3)));
+		
+	}
+
+
+    public static String triangleType(int a, int b, int c) {
+        boolean c1, c2, c3, isTriangle;
 
 		Scanner reader = new Scanner(System.in);
 
@@ -52,19 +57,18 @@ public class Triangle {
 //		Step 3: Determine Triangle Type
 		if (isTriangle) {
 			if ((a == b) && (b == c)) {
-				System.out.println("Equilateral");
+				return "Equilateral";
 			}
 			else if ((a != b) && (a != c) && (b != c)) {
-				System.out.println("Scalene");
+				return "Scalene";
 			} 
 			else {
-				System.out.println("Isosceles");
+				return "Isosceles";
 			}
 		} 
 		else {
-			System.out.println("Not a Triangle");
+			return "Not a Triangle";
 		}
 
-	}
-
+    }
 }
