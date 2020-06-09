@@ -22,14 +22,9 @@ public class Triangle {
         c2 = (1 <= b) && (b <= 200);
         c3 = (1 <= c) && (c <= 200);
 
-        if (!c1) {
-            return "Value of a is not in the range of permitted values";
+        if (!c1 || !c2 || !c3) {
+            return "Out of range";
         }
-        if (!c2) {
-            return "Value of b is not in the range of permitted values";
-        }
-        if (!c3) {
-            return "Value of c is not in the range of permitted values";
 
 //		Step 2: Is A Triangle?
 		if ((a < b + c) && (b < a + c) && (c < a + b)) {
